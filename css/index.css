@@ -87,6 +87,10 @@ main {
     margin-left: 65px;
     font-family: Cambria;
 }
+.content { 
+    flex-direction: row;
+    display: flex;
+} 
 .form-label, .form-input, .form-point, .form-type {
     display: flex;
     flex-direction: row;
@@ -110,4 +114,13 @@ footer > p{
     width: 436px;
     height: 25px;
     text-align: center;
+}
+.form-output {
+    font-family: cambria;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    width: 400px;
+    margin-left: 150px;
+    padding: 20px;
 }

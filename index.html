@@ -40,19 +40,18 @@
             <!--Form-->
             <section class="form" id="message">
                 <h2 class="form-title">Message Us</h2>
-                <form name="message-form" onsubmit="return" validateForm()>
-                <div class="form-input">
+                <main class="content">
+                <form name="message-form" onsubmit="return validateForm()" method="POST">
                     <!--Nama-->
-                    <div class="form-label">
-                        <label for="name">Nama</label>
+                    <div class="form-input">
+                        <div class="form-label"><label for="name">Nama</label></div>
+                        <div class="form-point">:</div>
+                        <div class="form-type">
+                            <input type="text" id="nama" class="input" placeholder="Nama" name="full-name"/>
+                        </div>
                     </div>
-                    <div class="form-point">:</div>
-                    <div class="form-type">
-                        <input type="text" id="nama" class="input" placeholder="Nama" name="full-name"/>
-                    </div>
-                </div>
                     <!--Tanggal Lahir-->
-                <div class="form-input">
+                    <div class="form-input">
                     <div class="form-label">
                         <label for="tanggal-lahir">Tanggal Lahir</label>
                     </div>
@@ -68,9 +67,9 @@
                     </div>
                     <div class="form-point">:</div>
                     <div class="form-type">
-                        <input type="radio" id="laki-laki" name="jk" value="Laki-laki">
+                        <input type="radio" id="laki-laki" name="gender" value="Laki-laki">
                         <label for="laki-laki">Laki-laki</label>
-                        <input type="radio" id="perempuan" name="jk" value="Perempuan">
+                        <input type="radio" id="perempuan" name="gender" value="Perempuan">
                         <label for="laki-laki">Perempuan</label>
                     </div>
                 </div>
@@ -81,11 +80,19 @@
                     </div>
                     <div class="form-point">:</div>
                     <div class="form-type">
-                        <textarea name="pesan" placeholder="Pesan" cols="46" rows="4"></textarea>
+                        <textarea name="messages" placeholder="Pesan" cols="46" rows="4"></textarea>
                     </div>
                 </div>
                 <input type="submit" value="Submit" class="button">
                 </form>
+                </div>
+                    <div class="form-output">
+                    <p>Nama : <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                    <p>Pesan : <span id="sender-messages"></span></p>
+                    </div>
+                </main>
             </section>
             <!--End Form-->
             <!--Javascript-->
@@ -93,23 +100,22 @@
                 function validateForm() {
                     var name = document.forms["message-form"]["full-name"].value;
                     var date = document.forms["message-form"]["birth-date"].value;
-                    var jk = document.forms["message-form"]["jk"].value;
-                    var pesan = document.forms["message-form"]["pesan"].value;
+                    var gender = document.forms["message-form"]["gender"].value;
+                    var messages = document.forms["message-form"]["messages"].value;
+                    
+                    if ( name == '' ||  date == '' || gender == '' || messages == '') {
+                        alert('Input tidak boleh kosong!');
+                        return false;
+                    }
+
                     document.getElementById("sender-full-name").innerText = name;
                     document.getElementById("sender-birth-date").innerText = date;
-                    document.getElementById("sender-jk").innerText = jk;
-                    document.getElementById("sender-pesan").innerText = pesan;
+                    document.getElementById("sender-gender").innerText = gender;
+                    document.getElementById("sender-messages").innerText = messages;
                     return false;
                 }
             </script>
-
-            <div class="form-output">
-                <p>Nama : <span id="sender-full-name"></span></p>
-                <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
-                <p>Jenis Kelamin : <span id="sender-jk"></span></p>
-                <p>Pesan : <span id="sender-pesan"></span></p>
-            </div>
-            <hr style="margin-top: 15px;">
+            <hr style="margin-top: 35px;">
         </main>
     </body>
     <footer>
