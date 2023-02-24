@@ -1,0 +1,250 @@
+<<<<<<< HEAD:index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <title>Ador - Find Your Talent</title>
+    </head>
+
+    <body>
+        <nav class="container">
+            <img src="assets/logo.png" class="logo"/> 
+            <a class="home" href="#home">Home</a>
+            <a class="profile" href="profile/profile.html">Get Profile</a>
+            <a class="portofolio" href="#">Portofolio</a>
+            <a class="message" href="#message">Message Us</a>
+        </nav>
+        <main>
+            <hr style="margin-top: 10px;" >
+            <!--Home-->
+            <section class="welcome" id="home">
+                <h1 class="welcome-title">Hi Anon, Welcome To Ador Entertainment</h1>
+                <p class="welcome-word">Find Your Talent Here. Join our audition in your city and follow your dream to become an Idol.</p>
+                <a href="assets/jk.png"><img class="welcome-picture" src="assets/jk.png"/></a>
+            </section>
+            <hr style="margin-top: 25px;">
+            <!--Headquarter-->
+            <section class="headquarter" id="profile">
+                <h2 class="headquarter-title">Our Headquarter</h2>
+                <div class="city">
+                    <a href="assets/busan.jpg"><img src="assets/busan.jpg"></a>
+                    <a href="assets/seoul.png"><img src="assets/seoul.png"></a>
+                    <a href="assets/tokyo.jpg"><img src="assets/tokyo.jpg"></a>
+                </div>
+                <div class="headquarter-caption">
+                    <h3>Busan</h3>
+                    <h3>Seoul</h3>
+                    <h3>Tokyo</h3>
+                </div>
+            </section>
+            <hr style="margin-top: 25px;">
+            <!--Form-->
+            <section class="form" id="message">
+                <h2 class="form-title">Message Us</h2>
+                <main class="content">
+                <form name="message-form" onsubmit="return validateForm()" method="POST">
+                    <!--Nama-->
+                    <div class="form-input">
+                        <div class="form-label"><label for="name">Nama</label></div>
+                        <div class="form-point">:</div>
+                        <div class="form-type">
+                            <input type="text" id="nama" class="input" placeholder="Nama" name="full-name"/>
+                        </div>
+                    </div>
+                    <!--Tanggal Lahir-->
+                    <div class="form-input">
+                    <div class="form-label">
+                        <label for="tanggal-lahir">Tanggal Lahir</label>
+                    </div>
+                    <div class="form-point">:</div>
+                    <div class="form-type">
+                        <input type="date" id="tgl" class="input" name="birth-date"/>
+                    </div>
+                </div>
+                    <!--Jenis Kelamin-->
+                <div class="form-input">
+                    <div class="form-label">
+                        <label for="jk">Jenis Kelamin</label>
+                    </div>
+                    <div class="form-point">:</div>
+                    <div class="form-type">
+                        <input type="radio" id="laki-laki" name="gender" value="Laki-laki">
+                        <label for="laki-laki">Laki-laki</label>
+                        <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                        <label for="laki-laki">Perempuan</label>
+                    </div>
+                </div>
+                    <!--Pesan-->
+                <div class="form-input">
+                    <div class="form-label">
+                        <label for="pesan">Pesan</label>
+                    </div>
+                    <div class="form-point">:</div>
+                    <div class="form-type">
+                        <textarea name="messages" placeholder="Pesan" cols="46" rows="4"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="Submit" class="button">
+                </form>
+                </div>
+                    <div class="form-output">
+                    <p>Nama : <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                    <p>Pesan : <span id="sender-messages"></span></p>
+                    </div>
+                </main>
+            </section>
+            <!--End Form-->
+            <!--Javascript-->
+            <script>
+                function validateForm() {
+                    var name = document.forms["message-form"]["full-name"].value;
+                    var date = document.forms["message-form"]["birth-date"].value;
+                    var gender = document.forms["message-form"]["gender"].value;
+                    var messages = document.forms["message-form"]["messages"].value;
+                    
+                    if ( name == '' ||  date == '' || gender == '' || messages == '') {
+                        alert('Input tidak boleh kosong!');
+                        return false;
+                    }
+
+                    document.getElementById("sender-full-name").innerText = name;
+                    document.getElementById("sender-birth-date").innerText = date;
+                    document.getElementById("sender-gender").innerText = gender;
+                    document.getElementById("sender-messages").innerText = messages;
+                    return false;
+                }
+            </script>
+            <hr style="margin-top: 35px;">
+        </main>
+    </body>
+    <footer>
+        <p>Created by Rezka</p>
+    </footer>
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <title>Ador - Find Your Talent</title>
+    </head>
+
+    <body>
+        <nav class="container">
+            <img src="assets/logo.png" class="logo"/> 
+            <a class="home" href="#home">Home</a>
+            <a class="profile" href="profile/profile.html">Get Profile</a>
+            <a class="portofolio" href="#">Portofolio</a>
+            <a class="message" href="#message">Message Us</a>
+        </nav>
+        <main>
+            <hr style="margin-top: 10px;" >
+            <!--Home-->
+            <section class="welcome" id="home">
+                <h1 class="welcome-title">Hi Anon, Welcome To Ador Entertainment</h1>
+                <p class="welcome-word">Find Your Talent Here. Join our audition in your city and follow your dream to become an Idol.</p>
+                <a href="assets/jk.png"><img class="welcome-picture" src="assets/jk.png"/></a>
+            </section>
+            <hr style="margin-top: 25px;">
+            <!--Headquarter-->
+            <section class="headquarter" id="profile">
+                <h2 class="headquarter-title">Our Headquarter</h2>
+                <div class="city">
+                    <a href="assets/busan.jpg"><img src="assets/busan.jpg"></a>
+                    <a href="assets/seoul.png"><img src="assets/seoul.png"></a>
+                    <a href="assets/tokyo.jpg"><img src="assets/tokyo.jpg"></a>
+                </div>
+                <div class="headquarter-caption">
+                    <h3>Busan</h3>
+                    <h3>Seoul</h3>
+                    <h3>Tokyo</h3>
+                </div>
+            </section>
+            <hr style="margin-top: 25px;">
+            <!--Form-->
+            <section class="form" id="message">
+                <h2 class="form-title">Message Us</h2>
+                <main class="content">
+                <form name="message-form" onsubmit="return validateForm()" method="POST">
+                    <!--Nama-->
+                    <div class="form-input">
+                        <div class="form-label"><label for="name">Nama</label></div>
+                        <div class="form-point">:</div>
+                        <div class="form-type">
+                            <input type="text" id="nama" class="input" placeholder="Nama" name="full-name"/>
+                        </div>
+                    </div>
+                    <!--Tanggal Lahir-->
+                    <div class="form-input">
+                    <div class="form-label">
+                        <label for="tanggal-lahir">Tanggal Lahir</label>
+                    </div>
+                    <div class="form-point">:</div>
+                    <div class="form-type">
+                        <input type="date" id="tgl" class="input" name="birth-date"/>
+                    </div>
+                </div>
+                    <!--Jenis Kelamin-->
+                <div class="form-input">
+                    <div class="form-label">
+                        <label for="jk">Jenis Kelamin</label>
+                    </div>
+                    <div class="form-point">:</div>
+                    <div class="form-type">
+                        <input type="radio" id="laki-laki" name="gender" value="Laki-laki">
+                        <label for="laki-laki">Laki-laki</label>
+                        <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                        <label for="laki-laki">Perempuan</label>
+                    </div>
+                </div>
+                    <!--Pesan-->
+                <div class="form-input">
+                    <div class="form-label">
+                        <label for="pesan">Pesan</label>
+                    </div>
+                    <div class="form-point">:</div>
+                    <div class="form-type">
+                        <textarea name="messages" placeholder="Pesan" cols="46" rows="4"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="Submit" class="button">
+                </form>
+                </div>
+                    <div class="form-output">
+                    <p>Nama : <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                    <p>Pesan : <span id="sender-messages"></span></p>
+                    </div>
+                </main>
+            </section>
+            <!--End Form-->
+            <!--Javascript-->
+            <script>
+                function validateForm() {
+                    var name = document.forms["message-form"]["full-name"].value;
+                    var date = document.forms["message-form"]["birth-date"].value;
+                    var gender = document.forms["message-form"]["gender"].value;
+                    var messages = document.forms["message-form"]["messages"].value;
+                    
+                    if ( name == '' ||  date == '' || gender == '' || messages == '') {
+                        alert('Input tidak boleh kosong!');
+                        return false;
+                    }
+
+                    document.getElementById("sender-full-name").innerText = name;
+                    document.getElementById("sender-birth-date").innerText = date;
+                    document.getElementById("sender-gender").innerText = gender;
+                    document.getElementById("sender-messages").innerText = messages;
+                    return false;
+                }
+            </script>
+            <hr style="margin-top: 35px;">
+        </main>
+    </body>
+    <footer>
+        <p>Created by Rezka</p>
+    </footer>
+>>>>>>> 80b6518cab062fb979d1724cd31e53edaa783890:docs/index.html
+</html>
